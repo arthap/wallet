@@ -34,8 +34,6 @@ public class SimpleKafkaTest {
 
     private static final String TOPIC = "spring";
 
-//    public static EmbeddedKafkaRule kafka = new EmbeddedKafkaRule(1,false, TOPIC);
-
     @Test
     public void testReceivingKafkaEvents() {
         Map<String, Object> configs = new HashMap<>(KafkaTestUtils.producerProps(embeddedKafkaBroker));
