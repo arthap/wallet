@@ -15,6 +15,9 @@
 docker-compose up --build   
 docker-compose down <- down docker compose     
 
+##java 
+"java","-Djava.security.egd=file:/dev/./urandom","-jar","/springbootdemo.jar
+
 ## CURLS 
 
 ### PUT /user/save 
