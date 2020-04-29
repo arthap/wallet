@@ -27,27 +27,9 @@ dependencies {
 	implementation 'org.flywaydb:flyway-core'
 	compile 'org.modelmapper:modelmapper:2.3.7'
 	runtimeOnly 'org.postgresql:postgresql'
-//	testImplementation('org.springframework.boot:spring-boot-starter-test') {
-//		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
-//	}
-//	testCompile('org.springframework.boot:spring-boot-starter-test')
-//	testImplementation "ru.yandex.qatools.embed:postgresql-embedded:2.9"
-//	testImplementation "io.zonky.test.embedded-database-spring-test:1.5.2"
-//	testImplementation "org.springframework.boot:spring-boot-starter-test:2.1.6.RELEASE"
-//	testImplementation "org.junit.jupiter:junit-jupiter-api"
-//	testImplementation "org.junit.jupiter:junit-jupiter-params"
-//	testRuntime "org.junit.jupiter:junit-jupiter-engine"
 	testCompile('org.springframework.boot:spring-boot-starter-test:2.1.6.RELEASE')
-//	testImplementation('org.springframework.boot:spring-boot-starter-test') {
-//		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
-//	}
 	testCompile 'org.springframework.kafka:spring-kafka-test:2.3.3.RELEASE'
 	testImplementation"com.h2database:h2"
-
-
-//	testCompile 'org.springframework.kafka.spring-kafkat:2.4.5.RELEASE'
-
-//	testCompile('org.springframework.boot:spring-boot-starter-test')
 }
 
 test {
