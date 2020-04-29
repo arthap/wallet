@@ -1,7 +1,6 @@
 version: '1.0.0'
 services:
 
-#      - "2181:2181"
   kafka:
     image: wurstmeister/kafka
 #    expose:
