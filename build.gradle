@@ -1,0 +1,56 @@
+
+plugins {
+	id 'org.springframework.boot' version '2.2.1.RELEASE'
+	id 'io.spring.dependency-management' version '1.0.8.RELEASE'
+	id 'java'
+	id "org.flywaydb.flyway" version "5.0.5"
+	id "com.github.honourednihilist.gradle-postgresql-embedded" version "0.4.0"
+}
+
+group = 'com.wallet.transaction'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+repositories {
+	mavenCentral()
+}
+apply plugin: 'java'
+apply plugin: 'org.springframework.boot'
+apply plugin: 'io.spring.dependency-management'
+apply plugin: 'org.flywaydb.flyway'
+apply plugin: 'com.github.honourednihilist.gradle-postgresql-embedded'
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+	implementation 'org.springframework.kafka:spring-kafka'
+	implementation 'org.flywaydb:flyway-core'
+	compile 'org.modelmapper:modelmapper:2.3.7'
+	runtimeOnly 'org.postgresql:postgresql'
+//	testImplementation('org.springframework.boot:spring-boot-starter-test') {
+//		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
+//	}
+//	testCompile('org.springframework.boot:spring-boot-starter-test')
+//	testImplementation "ru.yandex.qatools.embed:postgresql-embedded:2.9"
+//	testImplementation "io.zonky.test.embedded-database-spring-test:1.5.2"
+//	testImplementation "org.springframework.boot:spring-boot-starter-test:2.1.6.RELEASE"
+//	testImplementation "org.junit.jupiter:junit-jupiter-api"
+//	testImplementation "org.junit.jupiter:junit-jupiter-params"
+//	testRuntime "org.junit.jupiter:junit-jupiter-engine"
+	testCompile('org.springframework.boot:spring-boot-starter-test:2.1.6.RELEASE')
+//	testImplementation('org.springframework.boot:spring-boot-starter-test') {
+//		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
+//	}
+	testCompile 'org.springframework.kafka:spring-kafka-test:2.3.3.RELEASE'
+	testImplementation"com.h2database:h2"
+
+
+//	testCompile 'org.springframework.kafka.spring-kafkat:2.4.5.RELEASE'
+
+//	testCompile('org.springframework.boot:spring-boot-starter-test')
+}
+
+test {
+	useJUnitPlatform()
+}
+
